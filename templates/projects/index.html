@@ -1,25 +1,52 @@
 {% extends "shared/base.html" %}
 {% load static %}
+{#{% block content %}#}
+{#    <h1 class="prj-title">My Projects</h1>#}
+{#    <div class="row">#}
+{#        {% for project in projects %}#}
+{#            <div class="col-sm-3">#}
+{#                <div class="card mb-2">#}
+{#                    <img src="{{ project.image.url }}" alt="" class="prj-card-img">#}
+{#                </div>#}
+{#                <div class="card-body">#}
+{#                    <h5 class="card-title">#}
+{#                        {{ project.title }}#}
+{#                    </h5>#}
+{#                    <p class="card-text">#}
+{#                        {{ project.description }}#}
+{#                    </p>#}
+{#                    <a href="{% url "project detail" project.pk %}" class="btn btn-primary">#}
+{#                        Read more#}
+{#                    </a>#}
+{#                </div>#}
+{#            </div>#}
+{#        {% endfor %}#}
+{#    </div>#}
+{#{% endblock %}#}
+
+
 {% block content %}
-    <h1 class="prj-title">My Projects</h1>
-    <div class="row">
+    <div class="card-content">
         {% for project in projects %}
-            <div class="col-sm-3">
-                <div class="card mb-2">
-                    <img src="{{ project.image.url }}" alt="" class="prj-card-img">
+            <article class="card">
+                <header class="card__thumb">
+                    <a href="{% url 'project detail' project.pk %}"><img src="{{ project.image.url }}" alt=""/></a>
+                </header>
+                <div class="card__body">
+                    <div class="card__category"><a href="{% url 'project detail' project.pk %}">dj</a></div>
+                    <h2 class="card__title"><a href="{% url 'project detail' project.pk %}">{{ project.title }}</a></h2>
+                    <div class="card__subtitle">Technology used: {{ project.technology }}</div>
+                    <p class="card__description">{{ project.description }}</p>
                 </div>
-                <div class="card-body">
-                    <h5 class="card-title">
-                        {{ project.title }}
-                    </h5>
-                    <p class="card-text">
-                        {{ project.description }}
-                    </p>
-                    <a href="{% url "project detail" project.pk %}" class="btn btn-primary">
-                        Read more
-                    </a>
+                <footer class="card__footer">
+                    <span class="icon ion-chatbox"></span><a href="#"> Comments</a>
+                </footer>
+            </article>
+            {% if forloop.counter|divisibleby:5 %}
                 </div>
-            </div>
+                <div class="card-content">
+            {% endif %}
         {% endfor %}
-    </div>
+        </div>
+
 {% endblock %}
