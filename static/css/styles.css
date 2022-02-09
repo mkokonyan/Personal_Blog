@@ -13,7 +13,7 @@
 body {
     font-family: "Roboto", serif;
     font-size: 16px;
-    background-color: #eee;
+    background-color: #e0e0e0;
 }
 
 body {
@@ -23,16 +23,29 @@ body {
 }
 
 .navbar {
+    position: sticky;
+    top: 0;
     margin-left: 10px;
     margin-right: 10px;
-    padding: 15px 80px;
+    padding: 0px 40px 0px 40px;
     display: flex;
     justify-content: space-between;
     box-shadow: 1px 1px 5px -2px black;
-    background: #a0a0a0;
+    color: #A3A9A2;
     font-size: 20px;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    z-index: 1;
 }
 
+.mkk-logo-conteiner {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.bg-light {
+    background-color: rgb(52, 58, 64) !important;
+}
 
 .card-content {
     padding-top: 10px;
