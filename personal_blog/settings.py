@@ -18,6 +18,7 @@ INSTALLED_APPS = [
 
     'personal_blog.project',
     'personal_blog.blog',
+    'personal_blog.contact',
 ]
 
 MIDDLEWARE = [
@@ -91,5 +92,8 @@ STATICFILES_DIRS = [
 MEDIA_URL = '/media/'
 MEDIA_ROOT = BASE_DIR / "media"
 
-
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+
+DEFAULT_FROM_EMAIL = 'mkokonyan@gmail.com'
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'

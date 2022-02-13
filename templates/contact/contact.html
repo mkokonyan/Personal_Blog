@@ -1,0 +1,82 @@
+{% extends "shared/base.html" %}
+
+{% block content %}
+    <div class="contact-header">
+        <h2 class="contact-title">I'd be <strong>happy</strong> hearing from you</h2>
+
+    </div>
+    <form action="{% url "contact" %}" method="post">
+        {% csrf_token %}
+        <article class="form">
+            <section class="form-info">
+                <label for="name">Name</label>
+                {{ form.name }}
+                <label for="email">Email</label>
+                {{ form.email }}
+                <label for="company">Company/Organization</label>
+                {{ form.company }}
+            </section>
+            <section class="form-message">
+                <label for="message">Message</label>
+                {{ form.message }}
+            </section>
+        </article>
+        <button class="btn btn-dark contact-btn">Submit</button>
+    </form>
+    <section class="contact-info">
+        <div class="map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2932.7910486581814!2d23.36459420084182!3d42.686968292634226!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40aa85ec70dcffb9%3A0xa32d2d284896ab2d!2z0YPQuy4g4oCe0JDRgtCw0L3QsNGBINCj0LfRg9C90L7QsuKAnCwgMTExMSDQti7Qui4g0JPQtdC-INCc0LjQu9C10LIsINCh0L7RhNC40Y8!5e0!3m2!1sbg!2sbg!4v1644783437250!5m2!1sbg!2sbg"
+                    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+
+            <section class="contact">
+                <ul>
+                    <li>
+                        <i class="fa fa-envelope"></i>
+                    </li>
+                    <li>
+                        <span class="contact-data">
+                            <strong>mkokonyan@gmail.com</strong>
+                        </span>
+                    </li>
+                    <li>
+                        <i class="fa fa-phone"></i>
+                    </li>
+                    <li>
+                        <span class="contact-data"><strong>0888888888</strong></span>
+                    </li>
+                </ul>
+                <hr class="contact-line">
+                <ul>
+                    <li>
+                        <i class="fa fa-map"></i>
+                    </li>
+                    <li class="contact-street">
+                        7486 Green St.
+                        Burlington
+                    </li>
+                    <li>
+                        <button class="btn btn-light contact-directions"><a
+                                href="https://www.google.com/maps/dir//Greene+St,+Burlington,+VT+05401,+%D0%A1%D1%8A%D0%B5%D0%B4%D0%B8%D0%BD%D0%B5%D0%BD%D0%B8+%D1%89%D0%B0%D1%82%D0%B8/@44.4897624,-73.4167373,11.33z/data=!4m9!4m8!1m0!1m5!1m1!1s0x4cca7af59ab1d771:0x4eba77af84219ea6!2m2!1d-73.2075892!2d44.4819283!3e0">Get
+                            directions</a></button>
+                    </li>
+                </ul>
+                <hr class="contact-line">
+                <ul class="icons-header">
+                    <li>
+                        <a class="icon" href="https://www.facebook.com/mkokonyan">
+                            <i class="fab fa-facebook"></i></a>
+                    </li>
+                    <li>
+                        <a class="icon" href="https://github.com/mkokonyan/">
+                            <i class="fab fa-github"></i></a>
+                    </li>
+                    <li>
+                        <a class="icon" href="https://www.linkedin.com/in/martin-kokonyan-29b7239b/">
+                            <i class="fab fa-linkedin"></i></a>
+                    </li>
+                </ul>
+            </section>
+        </div>
+
+    </section>
+{% endblock %}

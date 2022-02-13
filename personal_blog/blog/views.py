@@ -1,7 +1,7 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
 
 from personal_blog.blog.forms import CommentForm
-from personal_blog.blog.models import Post, Comment
+from personal_blog.blog.models import Post, Comment, Category
 
 
 def blog_index(request):
@@ -37,8 +37,9 @@ def blog_detail(request, pk):
 
 def blog_category(request, category):
     posts = Post.objects.filter(categories__name__contains=category).order_by("-created_on")
+    category_object = get_object_or_404(Category, name=category)
     context = {
-        "category": category,
+        "category": category_object.name,
         "posts": posts,
     }
 
