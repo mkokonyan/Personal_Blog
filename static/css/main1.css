@@ -1,6 +1,8 @@
 @import url("https://use.fontawesome.com/releases/v5.15.4/css/all.css");
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:400,700);
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@1,300&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:wght@900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fredericka+the+Great&display=swap');
 
 * {
     box-sizing: border-box;
@@ -344,7 +346,7 @@ a .fab:hover {
 }
 
 a {
-  text-decoration: none;
+    text-decoration: none;
 }
 
 .contact-street {
@@ -358,9 +360,182 @@ a {
 .contact-directions {
     display: inline-block;
     position: relative;
-    left:15px;
+    left: 15px;
 }
 
 .contact-directions a {
     text-decoration: none;
+}
+
+
+header {
+    height: 200vh;
+}
+
+.container {
+    /* hide fixed overflow contents */
+    clip: rect(0, auto, auto, 0);
+
+    /* does not work if overflow = visible */
+    overflow: hidden;
+
+    /* only works with absolute positioning */
+    position: absolute;
+
+    /* Make sure containers are full-width and height */
+    height: 100vh;
+    width: 100%;
+    min-width: 400px;
+    max-width: 70%;
+
+
+}
+
+.container_solid {
+    background: e2e2e2;
+    /* position this container at the top of its parent element */
+    top: 0;
+    left: 341px;
+    min-width: 400px;
+    max-width: 70%;
+}
+
+.title_wrapper {
+    position: relative;
+    display: block;
+    margin: auto;
+    width: 100%;
+    /* center the text wrapper vertically */
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+.title_wrapper h1 {
+    text-align: center;
+    font-size: 86px;
+    font-family: 'Fraunces', sans-serif;
+    font-weight: 800;
+    max-width: 40ch;
+    transform: scale(0.94);
+    animation: scale 3s forwards cubic-bezier(0.5, 1, 0.89, 1);
+
+}
+
+@keyframes scale {
+    100% {
+        transform: scale(1);
+    }
+}
+
+span {
+    display: inline-block;
+    opacity: 0;
+    filter: blur(4px);
+}
+
+span:nth-child(1) {
+    animation: fade-in 0.8s 0.1s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+span:nth-child(2) {
+    animation: fade-in 0.8s 0.2s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+span:nth-child(3) {
+    animation: fade-in 0.8s 0.3s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+span:nth-child(4) {
+    animation: fade-in 0.8s 0.4s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+span:nth-child(5) {
+    animation: fade-in 0.8s 0.5s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+span:nth-child(6) {
+    animation: fade-in 0.8s 0.6s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+span:nth-child(7) {
+    animation: fade-in 0.8s 0.7s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+
+@keyframes fade-in {
+    100% {
+        opacity: 1;
+        filter: blur(0);
+    }
+}
+
+.container_solid .title_wrapper h1 {
+    /* the text background */
+    background: url(https://scontent.fsof8-1.fna.fbcdn.net/v/t1.6435-9/104119244_10217607163514494_8039413680506278953_n.jpg?_nc_cat=105&ccb=1-5&_nc_sid=e3f864&_nc_ohc=xvByTh5kqbgAX_qN-SI&_nc_ht=scontent.fsof8-1.fna&oh=00_AT9Fy1DCye6IHW8aqeqSw4_bwaGRU2geyFxyBW8mJNYJpw&oe=622EF8DC);
+    background-size: 73vw auto;
+    background-position: center;
+
+    /* clip the text is possible */
+    text-fill-color: transparent;
+    -webkit-text-fill-color: #343a40f5;
+    background-clip: text;
+    -webkit-background-clip: text;
+    text-shadow: 0px 2px 2px rgba(255, 255, 255, 0.4);
+
+    /* fallback text color */
+    color: black;
+}
+
+.container_image {
+    /* Grab a free image from unsplash */
+    background-image: url(https://scontent.fsof8-1.fna.fbcdn.net/v/t1.6435-9/104119244_10217607163514494_8039413680506278953_n.jpg?_nc_cat=105&ccb=1-5&_nc_sid=e3f864&_nc_ohc=xvByTh5kqbgAX_qN-SI&_nc_ht=scontent.fsof8-1.fna&oh=00_AT9Fy1DCye6IHW8aqeqSw4_bwaGRU2geyFxyBW8mJNYJpw&oe=622EF8DC);
+    background-size: 73vw auto;
+    background-position: center;
+    background-attachment: fixed;
+
+
+    left: 350px;
+
+    /* position the second container below the first container */
+    top: 100vh;
+}
+
+.container_image .title_wrapper h1 {
+    color: white;
+    text-shadow: #1c1c1c;
+}
+
+.about-content {
+    min-height: 100vh;
+    padding: 2em;
+    margin: auto;
+    max-width: 1400px;
+}
+
+.about-content p {
+    font-size:24px;
+    width: 100%;
+
+}
+
+.about-content h2 {
+    font-family: 'Fraunces', serif;
+}
+
+.about-content hr {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    border: 0;
+    border-top: 2px solid rgba(0, 0, 0, 0.1);
+}
+
+.about-color p {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+
+}
+
+.btn-cv {
+    text-align: center;
 }

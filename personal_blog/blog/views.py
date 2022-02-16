@@ -24,7 +24,7 @@ def blog_detail(request, pk):
                 post=post
             )
             comment.save()
-            return redirect("blog index")
+            return redirect("blog detail", pk)
 
     comments = Comment.objects.filter(post=post)
     context = {
