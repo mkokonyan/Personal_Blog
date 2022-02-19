@@ -6,7 +6,7 @@
         {% for project in projects %}
             <article class="card">
                 <header class="card__thumb">
-                    <a href="{% url 'project detail' project.pk %}"><img src="{{ project.image.url }}" alt=""/></a>
+                    <a href="{% url 'project detail' project.pk %}"><img src="{{ project.image }}" alt=""/></a>
                 </header>
                 <div class="card__body">
                     <div class="card__category"><a href="{% url 'project detail' project.pk %}">dj</a></div>

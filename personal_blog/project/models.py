@@ -9,8 +9,8 @@ class Project(models.Model):
     technology = models.CharField(
         max_length=20,
     )
-    image = models.ImageField(
-        upload_to="project",
+    image = models.URLField(
+        max_length=200,
     )
 
     def __str__(self):
