@@ -473,7 +473,7 @@ span:nth-child(7) {
 
 .container_solid .title_wrapper h1 {
     /* the text background */
-    background: url(https://scontent.fsof8-1.fna.fbcdn.net/v/t1.6435-9/104119244_10217607163514494_8039413680506278953_n.jpg?_nc_cat=105&ccb=1-5&_nc_sid=e3f864&_nc_ohc=xvByTh5kqbgAX_qN-SI&_nc_ht=scontent.fsof8-1.fna&oh=00_AT9Fy1DCye6IHW8aqeqSw4_bwaGRU2geyFxyBW8mJNYJpw&oe=622EF8DC);
+    background: url(https://scontent.fsof8-1.fna.fbcdn.net/v/t1.6435-9/104119244_10217607163514494_8039413680506278953_n.jpg?_nc_cat=105&ccb=1-5&_nc_sid=e3f864&_nc_ohc=Wv2FkyV-AhYAX844nD_&_nc_ht=scontent.fsof8-1.fna&oh=00_AT-L_EU0yupaK200_1b_duEuHcwC-HQ-QPfckAxBjFIGYA&oe=625685DC);
     background-size: 73vw auto;
     background-position: center;
 
@@ -490,7 +490,7 @@ span:nth-child(7) {
 
 .container_image {
     /* Grab a free image from unsplash */
-    background-image: url(https://scontent.fsof8-1.fna.fbcdn.net/v/t1.6435-9/104119244_10217607163514494_8039413680506278953_n.jpg?_nc_cat=105&ccb=1-5&_nc_sid=e3f864&_nc_ohc=xvByTh5kqbgAX_qN-SI&_nc_ht=scontent.fsof8-1.fna&oh=00_AT9Fy1DCye6IHW8aqeqSw4_bwaGRU2geyFxyBW8mJNYJpw&oe=622EF8DC);
+    background-image: url(https://scontent.fsof8-1.fna.fbcdn.net/v/t1.6435-9/104119244_10217607163514494_8039413680506278953_n.jpg?_nc_cat=105&ccb=1-5&_nc_sid=e3f864&_nc_ohc=Wv2FkyV-AhYAX844nD_&_nc_ht=scontent.fsof8-1.fna&oh=00_AT-L_EU0yupaK200_1b_duEuHcwC-HQ-QPfckAxBjFIGYA&oe=625685DC);
     background-size: 73vw auto;
     background-position: center;
     background-attachment: fixed;
